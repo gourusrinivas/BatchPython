@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Python') {
+            steps {
+                bat "sam.py"
+            }
+        }
+        stage('Batch') {
+            steps {
+                bat "fam.bat"
+            }
+        }
+        stage('Python') {
+            steps {
+                bat "sam.py"
+            }
+        }
+        stage('Batch') {
+            steps {
+                bat "fam.bat"
+            }
+        }
+        
+    }
+}
